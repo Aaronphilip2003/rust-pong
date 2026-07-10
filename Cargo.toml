@@ -1,0 +1,18 @@
+[package]
+name = "rust-pong"
+version = "0.1.0"
+edition = "2021"
+description = "A retro single-player Pong clone written in Rust with Macroquad, targeting native desktop and WebAssembly (GitHub Pages)."
+authors = ["You"]
+
+# Optimize release builds for a small, fast WASM binary as well as a snappy
+# native build.
+[profile.release]
+opt-level = "s"
+lto = true
+
+[dependencies]
+# Macroquad is a lightweight, dependency-free game framework that compiles
+# cleanly to native binaries AND wasm32-unknown-unknown, which makes it a
+# great fit for a GitHub Pages deployment target.
+macroquad = "0.4"
